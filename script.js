@@ -17,10 +17,6 @@ document.addEventListener('click', function(event) {
     }
 });
 
-window.addEventListener('click', function(event) {
-
-});
-
 function toggleSubmenu(submenuID) {
     const submenu = document.getElementById(submenuID);
     const allSubmenus = document.querySelectorAll('.submenu');
@@ -31,10 +27,12 @@ function toggleSubmenu(submenuID) {
         }
     });
 
-    if(submenu.style.display === 'block') {
-        submenu.style.display = 'none';
-    } else {
-        submenu.style.display = 'block';
+    if(submenu) {
+        if(submenu.style.display === 'block') {
+            submenu.style.display = 'none';
+        } else {
+            submenu.style.display = 'block';
+        }
     }
 }
 
@@ -51,19 +49,24 @@ function showSubpage(pageID) {
     });
 }
 
+function showSubpageAndScrollToFragment(pageID, fragmentID) {
+    showSubpage(pageID);
+
+    const fragment = document.getElementById(fragmentID);
+    if (fragment) {
+        fragment.scrollTo();
+    }
+}
+
 window.addEventListener('message', function(event) {
     if(event.data.type === 'changeColor' && event.origin === this.window.origin) {
         document.body.style.backgroundColor = event.data.color;
     }
-});
 
-const allIframes = document.querySelectorAll('iframe');
-
-allIframes.forEach(function(iframe) {
-    iframe.contentWindow.document.addEventListener('click', function(event) {
+    if(event.data === 'clicked') {
         const allSubmenus = document.querySelectorAll('.submenu');
-        allSubmenus.forEach(function(submenu) {
+        allSubmenus.forEach(function(submenu){
             submenu.style.display = 'none';
         });
-    });
+    }
 });
