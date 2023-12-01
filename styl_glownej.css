@@ -5,13 +5,19 @@ body, html {
     transition: background-color 0.5s ease;
 }
 
+.filler {
+    min-height: 93px;
+}
+
 .top-bar {
     background-color: #333;
+    width: 100%;
     color: #ccc;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
 }
 
 .top-bar-left {
@@ -79,12 +85,18 @@ body, html {
     background-color: #f2f2f2;
 }
 
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
 .content {
     padding: 20px;
 }
 
 .content iframe {
-    width: 80%;
+    width: 100%;
     height: 800px;
 }
 

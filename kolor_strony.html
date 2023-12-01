@@ -7,11 +7,19 @@
     body {
       transition: background-color 0.5s ease; /* Dodanie przejścia dla koloru tła */
     }
+
+    .main-content {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f0f0f0;
+    }
   </style>
 </head>
 <body>
-  <h1>Zmiana losowego koloru tła strony</h1>
-  <button onclick="zmienLosowyKolor()">Zmień kolor tła</button>
+  <div class="main-content">
+    <h1>Zmiana losowego koloru tła strony</h1>
+    <button onclick="zmienLosowyKolor()">Zmień kolor tła</button>
+  </div>
 
   <script>
     function zmienLosowyKolor() {

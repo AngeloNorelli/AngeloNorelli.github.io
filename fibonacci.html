@@ -3,13 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Ciąg Fibonacciego</title>
+  <style>
+    body {
+        font-family: 'Arial', sans-serif;
+    }
+
+    .main-content {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
-  <h1>Obliczanie n-tego elementu ciągu Fibonacciego</h1>
-  <label for="number">Podaj n: </label>
-  <input type="number" id="inputNumber" placeholder="Wprowadź liczbę">
-  <button onclick="obliczFibonacci()">Oblicz</button>
-  <p>Wynik: <span id="wynik"></span></p>
+  <div class="main-content">
+    <h1>Obliczanie n-tego elementu ciągu Fibonacciego</h1>
+    <label for="number">Podaj n: </label>
+    <input type="number" id="inputNumber" placeholder="Wprowadź liczbę">
+    <button onclick="obliczFibonacci()">Oblicz</button>
+    <p>Wynik: <span id="wynik"></span></p>
+  </div>
 
   <script>
     function obliczFibonacci() {

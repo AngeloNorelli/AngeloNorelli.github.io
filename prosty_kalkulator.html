@@ -3,16 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Kalkulator</title>
+  <style>
+    body {
+        font-family: 'Arial', sans-serif;
+    }
+
+    .main-content {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f0f0f0;
+    }
+</style>
 </head>
 <body>
-  <h1>Prosty kalkulator</h1>
-  <input type="number" id="liczba1" placeholder="Wprowadź pierwszą liczbę">
-  <input type="number" id="liczba2" placeholder="Wprowadź drugą liczbę">
-  <button onclick="oblicz('suma')">Suma</button>
-  <button onclick="oblicz('roznica')">Odejmowanie</button>
-  <button onclick="oblicz('iloczyn')">Mnożenie</button>
-  <button onclick="oblicz('iloraz')">Dzielenie</button>
-  <p>Wynik: <span id="wynik"></span></p>
+  <div class="main-content">
+    <h1>Prosty kalkulator</h1>
+    <input type="number" id="liczba1" placeholder="Wprowadź pierwszą liczbę">
+    <input type="number" id="liczba2" placeholder="Wprowadź drugą liczbę">
+    <button onclick="oblicz('suma')">Suma</button>
+    <button onclick="oblicz('roznica')">Odejmowanie</button>
+    <button onclick="oblicz('iloczyn')">Mnożenie</button>
+    <button onclick="oblicz('iloraz')">Dzielenie</button>
+    <p>Wynik: <span id="wynik"></span></p>
+  </div>
 
   <script>
     function oblicz(operacja) {
