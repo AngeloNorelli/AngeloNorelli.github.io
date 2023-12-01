@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona Główna projektu</title>
+    <link rel="stylesheet" href="styl_glownej.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <div class="tab" onclick="toggleSubmenu(showSubpage('strona_glowna'))">Strona  Główna</div>
+
+            <div class="spacer"></div>
+
+            <div class="tab-container">
+                <div class="tab" onclick="toggleSubmenu('zakladka1')">
+                Zadania w JS
+                    <div class="submenu" id="zakladka1" style="display: none;">
+                        <div class="subsite" onclick="showSubpage('zakladka1-content')">Prosty kalkulator</div>
+                        <div class="subsite" onclick="showSubpage('zakladka2-content')">Fibonacci</div>
+                        <div class="subsite" onclick="showSubpage('zakladka3-content')">Pole Prostokąta</div>
+                    </div>
+                </div>
+
+                <div class="tab" onclick="toggleSubmenu('zakladka2')">
+                Zakładka2
+                    <div class="submenu" id="zakladka2" style="display: none;">
+                        <div class="subsite" onclick="showSubpage('')">Zakładka 2.1</div>
+                        <div class="subsite" onclick="showSubpage('')">Zakładka 2.2</div>
+                        <div class="subsite" onclick="showSubpage('')">Zakładka 2.3</div>
+                    </div>
+                </div>
+
+                <div class="tab" onclick="toggleSubmenu(showSubpage('kolor_strony'))">
+                Kolor Strony
+                </div>
+            </div>
+        </div>
+
+        <div class="bar-title">
+            <h1>Angelo Norelli</h1>
+        </div>
+
+        <a href="#footer" class="tab" onclick="toggleSubmenu('')">Kontakt</a>
+    </div>
+
+    <div id="strona_glowna" class="content">
+        <iframe src="witam.html" frameborder="0"></iframe>
+    </div>
+
+    <div id="zakladka1-content" class="content" style="display: none;">
+        <iframe src="prosty_kalkulator.html" frameborder="0"></iframe>
+    </div>
+
+    <div id="zakladka2-content" class="content" style="display: none;">
+        <iframe src="fibonacci.html" frameborder="0"></iframe>
+    </div>
+
+    <div id="zakladka3-content" class="content" style="display: none;">
+        <iframe src="pole_prostokata.html" frameborder="0"></iframe>
+    </div>
+
+    <div id="kolor_strony" class="content" style="display: none;">
+        <iframe src="kolor_strony.html" frameborder="0"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+<footer id="footer">
+    <div class="footer-title">Kontakt</div>
+    <div class="footer-icons">
+        <a href="mailto:angnorelli@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100004182914077"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/angelo_junior_norelli/#"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/AngeloNorelli"><i class="fab fa-github"></i></a>
+        <a href="https://outlook.live.com/"><i class="fas fa-envelope-open-text"></i></a>
+    </div>
+    <p>&copy; 2023 Angelo Norelli</p>
+</footer>
+
+<!-- Biblioteka Font Awesome - ikony -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</html>
