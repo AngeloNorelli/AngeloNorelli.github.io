@@ -2,6 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>Wizytówka</title>
     <link rel="stylesheet" href="styl_glownej.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -11,6 +12,7 @@
     <div class="top-bar">
         <div class="top-bar-left">
             <div class="tab" onclick="toggleSubmenu(showSubpage('strona_glowna'))">Strona  Główna</div>
+            <div class="small_title">Angelo Norelli</div>
 
             <div class="spacer"></div>
 
@@ -35,7 +37,6 @@
         </div>
 
         <div class="bar-title">
-            <div style="display: flex; width: 33%;"></div>
             Angelo Norelli
         </div>
 
@@ -46,39 +47,39 @@
     <div class="container">
         <div class="main-content" style="width: 100%;">
             <div id="strona_glowna" class="content">
-                <iframe src="witam.html" frameborder="0"></iframe>
+                <iframe src="witam.html" frameborder="0" scrolling="no" style="height: 710px;"></iframe>
             </div>
 
             <div id="zakladka1-content" class="content" style="display: none;">
-                <iframe src="prosty_kalkulator.html" frameborder="0"></iframe>
+                <iframe src="prosty_kalkulator.html" frameborder="0" scrolling="no" style="height: 300px;"></iframe>
             </div>
 
             <div id="zakladka2-content" class="content" style="display: none;">
-                <iframe src="fibonacci.html" frameborder="0"></iframe>
+                <iframe src="fibonacci.html" frameborder="0" scrolling="no" style="height: 350px;"></iframe>
             </div>
 
             <div id="zakladka3-content" class="content" style="display: none;">
-                <iframe src="pole_prostokata.html" frameborder="0"></iframe>
+                <iframe src="pole_prostokata.html" frameborder="0" scrolling="no" style="height: 350px;"></iframe>
             </div>
 
             <div id="projekty" class="content" style="display: none;">
-                <iframe src="projekty.html" frameborder="0"></iframe>
+                <iframe src="projekty.html" frameborder="0" scrolling="no" style="height: 1690px;"></iframe>
             </div>
 
             <div id="kolor_strony" class="content" style="display: none;">
-                <iframe src="kolor_strony.html" frameborder="0"></iframe>
+                <iframe src="kolor_strony.html" frameborder="0" scrolling="no" style="height: 250px;"></iframe>
             </div>
         </div>
 
-        <div style="width: 20%; margin-top: 30px; margin-bottom: 30px; margin-right: 5px">
-            <div class="main-content" style="flex: 2; margin-bottom: 30px; color: #e0dfdf; background-color: #333; border-radius: 10px;">
+        <div class="sidebar">
+            <div class="main-content">
                 <div style="padding: 20px; font-size: 20px;">
                     <h3>Cytat z mojego ulubionego filmu:</h3>
                     Jak to jest być skrybą, dobrze?<br> <br>
                     A, wie pan, moim zdaniem to nie ma tak, że dobrze, albo że niedobrze. Gdybym miał powiedzieć, co cenię w życiu najbardziej, powiedziałbym, że ludzi. Ludzi, którzy podali mi pomocną dłoń, kiedy sobie nie radziłem, kiedy byłem sam, i co ciekawe, to właśnie przypadkowe spotkania wpływają na nasze życie. Chodzi o to, że kiedy wyznaje się pewne wartości, nawet pozornie uniwersalne, bywa, że nie znajduje się zrozumienia, które by tak rzec, które pomaga się nam rozwijać. Ja miałem szczęście, by tak rzec, ponieważ je znalazłem, i dziękuję życiu! Dziękuję mu; życie to śpiew, życie to taniec, życie to miłość! Wielu ludzi pyta mnie o to samo: ale jak ty to robisz, skąd czerpiesz tę radość? A ja odpowiadam, że to proste! To umiłowanie życia. To właśnie ono sprawia, że dzisiaj na przykład buduję maszyny, a jutro – kto wie? Dlaczego by nie – oddam się pracy społecznej i będę, ot, choćby, sadzić...<br> doć— m-marchew...
                 </div>
             </div>
-            <div class="main-content" style="margin-bottom: 30px;  color: #e0dfdf; background-color: #333; border-radius: 10px;">
+            <div class="main-content">
                 <div style="padding: 20px; font-size: 20px;">
                     <h3>Najlepsze cytaty z mojej ulubionej gry:</h3>
                     Geralt: Co jest w garnku?<br>

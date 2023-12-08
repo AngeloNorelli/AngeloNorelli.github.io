@@ -49,15 +49,6 @@ function showSubpage(pageID) {
     });
 }
 
-function showSubpageAndScrollToFragment(pageID, fragmentID) {
-    showSubpage(pageID);
-
-    const fragment = document.getElementById(fragmentID);
-    if (fragment) {
-        fragment.scrollTo();
-    }
-}
-
 window.addEventListener('message', function(event) {
     if(event.data.type === 'changeColor' && event.origin === this.window.origin) {
         document.body.style.backgroundColor = event.data.color;
