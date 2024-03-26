@@ -175,3 +175,8 @@ body {
 .home-sci a:hover::before {
     width: 100%;
 }
+
+.image {
+    margin: 0 0  0 30px;
+    height: 100%;
+}
