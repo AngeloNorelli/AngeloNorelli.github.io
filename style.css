@@ -50,7 +50,7 @@ body {
 }
 
 .home-content {
-    max-width: 700px;
+    max-width: 1000px;
 }
 
 .home-content h1 {
@@ -59,10 +59,36 @@ body {
     line-height: 1.2;
 }
 
-.home-content h3 {
+.home-content .text-animate {
+    position: relative;
+    display: inline-block;
+}
+
+.home-content .text-animate h3 {
     font-size: 32px;
     font-weight: 700;
-    color: #00c381;
+    color: transparent;
+    -webkit-text-stroke: .7px #00c381;
+    background-image: linear-gradient(#00c381, #00c381);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -50rem 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.home-content .text-animate h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid #00c381;
+    z-index:  -1;
+    background-position: 0 0;
+    animation: homeCursorText 6s linear infinite;
+    animation-delay: 2s;
 }
 
 .home-content p {
@@ -183,4 +209,29 @@ body {
     right: 0;
     height: 100%;
     z-index: -1;
+}
+
+@keyframes homeBgText {
+    0%, 10%, 100% {
+        background-position: -50rem 0;
+    }
+
+    65%, 85% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes homeCursorText {
+    0%, 10%, 100% {
+        width: 0;
+    }
+
+    65%, 78%, 85% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    75%, 81% {
+        opacity: 0;
+    }
 }
