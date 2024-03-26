@@ -39,7 +39,7 @@ body {
 
 .navbar a:hover,
 .navbar a.active {
-    color: #000944;
+    color: #00c381;
 }
 
 .home {
@@ -62,7 +62,7 @@ body {
 .home-content h3 {
     font-size: 32px;
     font-weight: 700;
-    color: #000944;
+    color: #00c381;
 }
 
 .home-content p {
@@ -84,8 +84,8 @@ body {
     align-items: center;
     width: 150px;
     height: 50px;
-    background-color: #000944;
-    border: 2px solid #000944;
+    background-color: #00c381;
+    border: 2px solid #00c381;
     border-radius: 8px;
     font-size: 19px;
     color: #00442d;
@@ -99,7 +99,7 @@ body {
 
 .btn-box a:nth-child(2) {
     background-color: transparent;
-    color: #000944;
+    color: #00c381;
 }
 
 .btn-box a:nth-child(2):hover {
@@ -107,7 +107,7 @@ body {
 }
 
 .btn-box a:nth-child(2)::before {
-    background-color: #000944;
+    background-color: #00c381;
 }
 
 .btn-box a::before {
@@ -123,7 +123,7 @@ body {
 }
 
 .btn-box a:hover {
-    color: #000944;
+    color: #00c381;
 }
 
 .btn-box a:hover::before {
@@ -146,10 +146,10 @@ body {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #000944;
+    border: 2px solid #00c381;
     border-radius: 50%;
     font-size: 25px;
-    color: #000944;
+    color: #00c381;
     text-decoration: none;
     z-index: 1;
     overflow: hidden;
@@ -167,7 +167,7 @@ body {
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #000944;
+    background-color: #00c381;
     z-index: -1;
     transition: .5s;
 }
@@ -177,6 +177,10 @@ body {
 }
 
 .image {
-    margin: 0 0  0 30px;
+    margin: 0 50px 0 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
     height: 100%;
+    z-index: -1;
 }
