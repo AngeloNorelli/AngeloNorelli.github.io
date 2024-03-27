@@ -370,7 +370,8 @@ span {
 }
 
 .education-content .content p {
-
+    padding-top: .5rem;
+    font-size: 1rem;
 }
 
 @keyframes homeBgText {
