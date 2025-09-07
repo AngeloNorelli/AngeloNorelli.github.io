@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import {
   Box,
@@ -17,18 +17,36 @@ import {
 } from 'react-icons/fa';
 
 const UploadArea = ({ onImageSelect, recentImages = [] }) => {
+  const [isLoading, setIsLoading] = useState(false);
+  
   const onDrop = useCallback((acceptedFiles) => {
     const file = acceptedFiles[0];
     if (file) {
+      if (file.size > 10 * 1024 * 1024) {
+        alert('File is too large. Maximum size is 10MB.');
+        return;
+      }
+
+      if (!file.type.startsWith('image/')) {
+        alert('Please select an image file.');
+        return;
+      }
+
+      setIsLoading(true);
       const reader = new FileReader();
       reader.onload = (e) => {
         onImageSelect(e.target.result, file);
+        setIsLoading(false);
+      };
+      reader.onerror = () => {
+        alert('Error reading file. Please try again.');
+        setIsLoading(false);
       };
       reader.readAsDataURL(file);
     }
   }, [onImageSelect]);
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+  const { getRootProps, getInputProps, isDragActive, open } = useDropzone({
     onDrop,
     accept: {
       'image/*': ['.jpeg', '.jpg', '.png', '.gif', '.webp']
@@ -74,10 +92,10 @@ const UploadArea = ({ onImageSelect, recentImages = [] }) => {
                 fontWeight="bold"
                 color="gray.700"
               >
-                {isDragActive ? "Drop the image here..." : "Drag 'n' drop an image here"}
+                {isLoading ? "Loading image..." : isDragActive ? "Drop the image here..." : "Drag 'n' drop an image here"}
               </Text>
               <Text fontSize="md" color="gray.500">
-                or click to select an image
+                {isLoading ? "Please wait..." : "or click to select an image"}
               </Text>
               <Text fontSize="sm" color="gray.400">
                 Supported formats: JPEG, PNG, GIF, WEBP (max 10MB)
@@ -88,6 +106,7 @@ const UploadArea = ({ onImageSelect, recentImages = [] }) => {
               size="lg"
               leftIcon={<FaFolder />}
               color="white"
+              onClick={open}
             >
               Select Image
             </Button>
